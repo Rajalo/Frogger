@@ -30,6 +30,9 @@ public class Frog extends Entity
         reverseImage = 0;
         hp = 10;
     }
+    /**
+    * changes the frog's status to the indicated state
+     */
     public void setMove(FrogState move)
     {
         if (currentState == FrogState.STILL)
@@ -38,12 +41,18 @@ public class Frog extends Entity
             frogTime = 7; //puts the frog on the precipice of changing phase
         }
     }
+    /**
+    * The frog dies
+     */
     public void die()
     {
         currentState = FrogState.DEAD;
         imageBase = 64;
         frogTime = 0;
     }
+    /**
+     *   handles the animations for movement, changing what gets used
+     */
     public void nextPhase()
     {
         if (currentState == FrogState.LEFT)

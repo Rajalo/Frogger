@@ -17,6 +17,9 @@ public class Log extends Entity{
         }
         clones = delay;
     }
+    /**
+        makes a new copy of the log, used for long logs
+     */
     public Log cloneLog()
     {
         Log clone = new Log(this.y/32, ++clones);

@@ -11,7 +11,9 @@ public class Flag extends Entity{
         super.step();
         currentImage = ManagerPanel.baseImages[imageBase+ManagerPanel.timeKeep%8];
     }
-
+    /**
+     * When the frog reaches the flag, this fires, turning it green
+     */
     public void reached()
     {
         imageBase = 48;
